@@ -29,7 +29,7 @@ RegisterCommand("boxoccluderfind", function(source, args, rawCommand)
     if nearest and next(nearest) == nil then print("Failed to find BoxOcclusion"); end
     for index, bo in ipairs(nearest) do
         if index > numBOs then break; end
-        print(("%s file=%s dist=%.2f <position x=\"%s\" y=\"%s\" z=\"%s\" />"):format(
+        print(("%sfile=%s dist=%.2f <position x=\"%s\" y=\"%s\" z=\"%s\" />"):format(
             numBOs > 1 and tostring(index)..": " or "",
             bo.filename,
             bo.dist,
